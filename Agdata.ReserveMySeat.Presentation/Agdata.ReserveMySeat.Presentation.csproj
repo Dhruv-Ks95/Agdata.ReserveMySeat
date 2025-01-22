@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Agdata.ReserveMySeat.Application\Agdata.ReserveMySeat.Application.csproj" />
+    <ProjectReference Include="..\Agdata.ReserveMySeat.Domain\Agdata.ReserveMySeat.Domain.csproj" />
+    <ProjectReference Include="..\Agdata.ReserveMySeat.Infrastructure\Agdata.ReserveMySeat.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>

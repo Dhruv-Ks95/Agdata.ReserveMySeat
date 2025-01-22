@@ -1,0 +1,5 @@
+﻿CREATE TABLE [dbo].[Seats] (
+    [SeatId] INT IDENTITY (1, 1) NOT NULL,
+    [SeatNumber] INT NOT NULL UNIQUE,
+    CONSTRAINT [PK_Seats] PRIMARY KEY CLUSTERED ([SeatId] ASC)
+);

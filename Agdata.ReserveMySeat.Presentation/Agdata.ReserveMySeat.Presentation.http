@@ -1,0 +1,6 @@
+@Agdata.ReserveMySeat.Presentation_HostAddress = http://localhost:5131
+
+GET {{Agdata.ReserveMySeat.Presentation_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
