@@ -33,6 +33,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Agdata.ReserveMySeat.Infras
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Agdata.ReserveMySeat.Domain.Tests", "Agdata.ReserveMySeat.Domain.Tests\Agdata.ReserveMySeat.Domain.Tests.csproj", "{45AC1866-66AA-4F65-B1B6-871D121ACE1C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Agdata.ReserveMySeat.Presentation.Tests", "Agdata.ReserveMySeat.Presentation.Tests\Agdata.ReserveMySeat.Presentation.Tests.csproj", "{A39E3460-9C18-4C19-B895-AB0044F092E9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -73,6 +75,10 @@ Global
 		{45AC1866-66AA-4F65-B1B6-871D121ACE1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{45AC1866-66AA-4F65-B1B6-871D121ACE1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{45AC1866-66AA-4F65-B1B6-871D121ACE1C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A39E3460-9C18-4C19-B895-AB0044F092E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A39E3460-9C18-4C19-B895-AB0044F092E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A39E3460-9C18-4C19-B895-AB0044F092E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A39E3460-9C18-4C19-B895-AB0044F092E9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -90,5 +96,6 @@ Global
 		{EE36BEDB-3017-46C4-946C-374010649B2D} = {434ECF6C-A74C-4E53-AD95-78DB9374EA17}
 		{0E59CE21-E69A-4BF7-9FA5-FFC4EB754398} = {434ECF6C-A74C-4E53-AD95-78DB9374EA17}
 		{45AC1866-66AA-4F65-B1B6-871D121ACE1C} = {434ECF6C-A74C-4E53-AD95-78DB9374EA17}
+		{A39E3460-9C18-4C19-B895-AB0044F092E9} = {434ECF6C-A74C-4E53-AD95-78DB9374EA17}
 	EndGlobalSection
 EndGlobal

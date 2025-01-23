@@ -55,7 +55,7 @@ public class Employee
 
         if (name.Length < 1 || name.Length > 50)
         {
-            throw new ArgumentException("Name must be between 3 and 50 characters.");
+            throw new ArgumentException("Name must be between 1 and 50 characters.");
         }
     }
 

@@ -1,6 +1,7 @@
 ﻿using Agdata.ReserveMySeat.Application.Interfaces;
 using Agdata.ReserveMySeat.Application.Services;
 using Agdata.ReserveMySeat.Domain.DTOs;
+using Agdata.ReserveMySeat.Presentation.CustomActionFilters;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Agdata.ReserveMySeat.Presentation.Controllers;
@@ -18,6 +19,7 @@ public class BookingController : ControllerBase
 
     [HttpPost]
     [Route("add")]
+    [ValidateModel]
     public async Task<IActionResult> AddAsync([FromBody] AddBookingRequestDto addBookingRequestDto)
     {
         try
@@ -49,6 +51,7 @@ public class BookingController : ControllerBase
 
     [HttpGet]
     [Route("getById/{id:int}")]
+    [ValidateModel]
     public async Task<IActionResult> GetByIdAsync([FromRoute] int id)
     {
         try
@@ -70,6 +73,7 @@ public class BookingController : ControllerBase
 
     [HttpGet]
     [Route("getByDate/{date}")]
+    [ValidateModel]
     public async Task<IActionResult> GetByDateAsync(DateTime date)
     {
         try
@@ -86,6 +90,7 @@ public class BookingController : ControllerBase
 
     [HttpGet]
     [Route("getByUserId/{id:int}")]
+    [ValidateModel]
     public async Task<IActionResult> GetByUserIdAsync([FromRoute] int id)
     {
         try
@@ -107,6 +112,7 @@ public class BookingController : ControllerBase
 
     [HttpGet]
     [Route("getMonthly")]
+    [ValidateModel]
     public async Task<IActionResult> GetMonthlyAsync()
     {
         var res = await bookingService.GetMonthlyAsync();
@@ -115,6 +121,7 @@ public class BookingController : ControllerBase
 
     [HttpPut]
     [Route("update")]
+    [ValidateModel]
     public async Task<IActionResult> UpdateAsync([FromBody] UpdateBookingRequestDto updateBookingRequestDto)
     {
         try
@@ -146,6 +153,7 @@ public class BookingController : ControllerBase
 
     [HttpDelete]
     [Route("delete")]
+    [ValidateModel]
     public async Task<IActionResult> RemoveAsync([FromBody] RemoveBookingRequestDto removeBookingRequestDto)
     {
         try

@@ -1,5 +1,6 @@
 ﻿using Agdata.ReserveMySeat.Application.Interfaces;
 using Agdata.ReserveMySeat.Domain.DTOs;
+using Agdata.ReserveMySeat.Presentation.CustomActionFilters;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Agdata.ReserveMySeat.Presentation.Controllers
@@ -16,6 +17,7 @@ namespace Agdata.ReserveMySeat.Presentation.Controllers
 
         [HttpPost]
         [Route("add")]
+        [ValidateModel]
         public async Task<IActionResult> AddAsync([FromBody] AddSeatRequestDto addSeatRequestDto)
         {
             try
@@ -42,6 +44,7 @@ namespace Agdata.ReserveMySeat.Presentation.Controllers
 
         [HttpGet]
         [Route("getById/{id:int}")]
+        [ValidateModel]
         public async Task<IActionResult> GetByIdAsync([FromRoute] int id)
         {
             try
@@ -63,6 +66,7 @@ namespace Agdata.ReserveMySeat.Presentation.Controllers
 
         [HttpGet]
         [Route("getAll")]
+        [ValidateModel]
         public async Task<IActionResult> GetAllAsync()
         {
             var res = await seatService.GetAllAsync();
@@ -71,6 +75,7 @@ namespace Agdata.ReserveMySeat.Presentation.Controllers
 
         [HttpGet]
         [Route("getAvailableByDate/{date}")]
+        [ValidateModel]
         public async Task<IActionResult> GetAvailableCountOnDateAsync([FromRoute] DateTime date)
         {
             try
@@ -87,6 +92,7 @@ namespace Agdata.ReserveMySeat.Presentation.Controllers
 
         [HttpPut]
         [Route("update")]
+        [ValidateModel]
         public async Task<IActionResult> UpdateAsync([FromBody] UpdateSeatRequestDto updateSeatRequestDto)
         {
             try
@@ -118,6 +124,7 @@ namespace Agdata.ReserveMySeat.Presentation.Controllers
 
         [HttpDelete]
         [Route("delete")]
+        [ValidateModel]
         public async Task<IActionResult> RemoveAsync([FromBody] RemoveSeatRequestDto removeSeatRequestDto)
         {
             try

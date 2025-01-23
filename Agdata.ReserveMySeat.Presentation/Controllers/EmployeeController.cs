@@ -1,5 +1,6 @@
 ﻿using Agdata.ReserveMySeat.Application.Interfaces;
 using Agdata.ReserveMySeat.Domain.DTOs;
+using Agdata.ReserveMySeat.Presentation.CustomActionFilters;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Agdata.ReserveMySeat.Presentation.Controllers;
@@ -16,6 +17,7 @@ public class EmployeeController : ControllerBase
 
     [HttpPost]
     [Route("add")]
+    [ValidateModel]
     public async Task<IActionResult> AddAsync([FromBody] AddEmployeeRequestDto addEmployeeRequestDto)
     {
         try
@@ -37,6 +39,7 @@ public class EmployeeController : ControllerBase
 
     [HttpGet]
     [Route("getById/{id:int}")]
+    [ValidateModel]
     public async Task<IActionResult> GetByIdAsync([FromRoute] int id)
     {
         try
@@ -58,6 +61,7 @@ public class EmployeeController : ControllerBase
 
     [HttpGet]
     [Route("getByEmail/{email}")]
+    [ValidateModel]
     public async Task<IActionResult> GetByEmailAsync([FromRoute] string email)
     {
         try
@@ -79,6 +83,7 @@ public class EmployeeController : ControllerBase
 
     [HttpGet]
     [Route("getAll")]
+    [ValidateModel]
     public async Task<IActionResult> GetAllAsync()
     {
         var res = await employeeService.GetAllAsync();
@@ -87,6 +92,7 @@ public class EmployeeController : ControllerBase
 
     [HttpPut]
     [Route("update")]
+    [ValidateModel]
     public async Task<IActionResult> UpdateAsync([FromBody] UpdateEmployeeRequestDto updateEmployeeRequestDto)
     {
         try
@@ -120,6 +126,7 @@ public class EmployeeController : ControllerBase
 
     [HttpDelete]
     [Route("delete")]
+    [ValidateModel]
     public async Task<IActionResult> RemoveAsync([FromBody] RemoveEmployeeRequestDto removeEmployeeRequestDto)
     {
         try
